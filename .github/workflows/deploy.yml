@@ -79,3 +79,4 @@ jobs:
           kubectl rollout status deployment/client-deployment
           kubectl rollout status deployment/server-deployment
           kubectl rollout status deployment/worker-deployment
+          
