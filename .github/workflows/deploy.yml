@@ -42,9 +42,9 @@ jobs:
 
       - name: Build images
         run: |
-          docker build -t zizutg/multi-client:${{ github.sha }} ./client
-          docker build -t zizutg/multi-server:${{ github.sha }} ./server
-          docker build -t zizutg/multi-worker:${{ github.sha }} ./worker
+          docker build --platform linux/amd64 -t zizutg/multi-client:${{ github.sha }} ./client
+          docker build --platform linux/amd64 -t zizutg/multi-server:${{ github.sha }} ./server
+          docker build --platform linux/amd64 -t zizutg/multi-worker:${{ github.sha }} ./worker
 
       - name: Push images
         run: |
